@@ -1,0 +1,86 @@
+@layer reset, init, design;
+
+@import url(normalize.css) layer(reset);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap) layer(init);
+
+@layer init {
+    :root {
+        --primary: #66d4d4;
+        --text: #000000;
+        --black: #000000;
+        --light: #FFFFFF;
+        --gray: #3B3E40;
+    }
+    html {
+        font-family: "Open Sans", sans-serif;
+        color: var(--black);
+        font-weight: 400;
+    }
+    .page__logo::before {
+        content: "";
+        display: inline-block;
+        background: center / contain no-repeat transparent;
+        /*
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        */
+        background-image: url("../images/logo.svg");
+        width: 2em;
+        height: 1em;
+        font-size: 1.5em;
+    }
+    .page__logo > span {
+        display: none;
+    }
+}
+
+/* VRSTVA PRO VAŠE STYLY */
+@layer design {
+    .image-responsive{
+        display: block;
+        width: 100%;
+    }
+    .page__header{
+        background-image: url(../images/header-2560w.webp);
+        background-size: cover;
+        background-position: left top;
+        padding: 1em;
+    }
+    .page__logo{
+        display: inline-block;
+        padding: 1em;   
+    }
+    .page__logo-container{
+        text-align: center;
+    }
+
+    .page__intro{
+        color: var(--light, white);
+    }
+    .button{
+        display: inline-block;
+        background-color: var(--primary, teal);
+        color: var(--light,white);
+        border-radius: 0.5em;
+        font-weight: 700;
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
+    .button:hover{
+        background-color: var(--light,white);
+        color: var(--black,black);
+
+    }
+    .button--light{
+        background-color: var(--light, white);
+        color: var(--text,black);
+
+    }
+    .button--light:hover{
+        background-color: var(--black,black);
+        color: var(--light,white);
+    }
+   
+
+}
