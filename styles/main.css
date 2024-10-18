@@ -60,11 +60,15 @@
 
     .page__intro{
         color: var(--light, white);
+        max-width: 30em;
     }
     .page__content{
         padding-top: 0.01em;
         max-width: 960px;
         margin: 0 auto;
+    }
+    .page__section{
+        margin: 1em;
     }
     .picture-box{
         margin: 0;
@@ -109,14 +113,26 @@
         padding: 1em;
         margin: 1em 0;
     }
+    .box--dark{
+        color: var(--light,white);
+        background-color: var(--gray,gray);
+        text-align: center;
+        border: none;
+    }
     .list > li::marker{
         color: var(--primary,aqua);
+    }
+    .list__item{
+        margin: 1em;
     }
     .product{
         padding: 1em;
         max-width: 24em;
         display: inline-block;
 
+    }
+    .text-big{
+        font-size: 5vh;
     }
    
 
