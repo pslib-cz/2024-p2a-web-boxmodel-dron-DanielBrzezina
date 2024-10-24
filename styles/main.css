@@ -134,6 +134,11 @@
     .text-big{
         font-size: 5vh;
     }
-   
+   .page__footer{
+    background-color: var(--gray,gray);
+    color: var(--light,white);
+    padding: 1em;
+    text-align: center;
+   }
 
 }
