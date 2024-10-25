@@ -86,7 +86,7 @@
         color: var(--light,white);
         border-radius: 0.5em;
         font-weight: 700;
-        padding: 0.5em 1em;
+        padding: 0.8em 1em;
         text-decoration: none;
     }
     .button--light{
@@ -118,6 +118,8 @@
         background-color: var(--gray,gray);
         text-align: center;
         border: none;
+        padding-bottom: 3em;
+        margin: 4em 0;
     }
     .list > li::marker{
         color: var(--primary,aqua);
@@ -140,5 +142,24 @@
     padding: 1em;
     text-align: center;
    }
-
+   .big__title{
+    font-size: 10vh;
+   }
+   .galery__item{
+    display: block;
+    margin: var(--indent);
+   }
+   .galery{
+    --indent:0.5;
+    margin: calc(-1*var(--indent)) ;
+   }
+   @media(min-width:768px){
+    .galery__item{
+        display: inline-block;
+        width: calc(50%- 2* var(--indent));
+    }
+    .galery__item--100{
+        width: calc(100%- 2* var(--indent))
+    }
+   }
 }
